@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n2u-Rc-Vmo">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="I9c-hq-pUK">
+            <objects>
+                <viewController id="8dl-sl-dfv" customClass="ViewController" customModule="SeSAC260102" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cc0-Tg-63s">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yVc-le-app"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLF-Vb-Iv6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263" y="809"/>
+        </scene>
+        <!--Random View Controller-->
+        <scene sceneID="fb0-iA-UhR">
+            <objects>
+                <viewController id="n2u-Rc-Vmo" customClass="RandomViewController" customModule="SeSAC260102" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vNT-1Y-MEx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzo-dB-cXW">
+                                <rect key="frame" x="30" y="198" width="333" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Xef-5c-Ubx"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat sed purus nec aliquam. Curabitur ornare felis eget nisl sodales, auctor ullamcorper augue auctor. Nam lacinia interdum libero quis viverra. Sed placerat mi mauris, ac faucibus felis placerat vitae. Ut ultrices ipsum nec aliquam pulvinar. Curabitur pharetra quam vel eros egestas auctor. Sed porta efficitur nibh ac faucibus. Donec nec leo efficitur, eleifend leo ut, euismod nibh. Etiam suscipit ut mauris et mollis.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVr-GT-TyY">
+                                <rect key="frame" x="96.666666666666686" y="328" width="200" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="V3s-A6-sW5"/>
+                                    <constraint firstAttribute="width" constant="200" id="kDJ-w4-rk3"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Butter"/>
+                                <connections>
+                                    <action selector="randomButtonClicked:" destination="n2u-Rc-Vmo" eventType="touchUpInside" id="ObE-8f-Iz3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nQ9-NZ-9N0"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="PVr-GT-TyY" firstAttribute="centerX" secondItem="vNT-1Y-MEx" secondAttribute="centerX" id="TQh-Y4-yMK"/>
+                            <constraint firstItem="nQ9-NZ-9N0" firstAttribute="trailing" secondItem="Dzo-dB-cXW" secondAttribute="trailing" constant="30" id="Uad-xa-2mC"/>
+                            <constraint firstItem="Dzo-dB-cXW" firstAttribute="top" secondItem="nQ9-NZ-9N0" secondAttribute="top" constant="80" id="ofj-U9-idA"/>
+                            <constraint firstItem="Dzo-dB-cXW" firstAttribute="leading" secondItem="nQ9-NZ-9N0" secondAttribute="leading" constant="30" id="oln-w5-bOe"/>
+                            <constraint firstItem="PVr-GT-TyY" firstAttribute="top" secondItem="Dzo-dB-cXW" secondAttribute="bottom" constant="30" id="zlS-pE-m3b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="Dzo-dB-cXW" id="kMa-E2-EOr"/>
+                        <outlet property="randomButton" destination="PVr-GT-TyY" id="ERQ-Gh-npV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aoe-zE-lYs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="808"/>
+        </scene>
+        <!--Poster View Controller-->
+        <scene sceneID="QIW-vC-MDL">
+            <objects>
+                <viewController id="50M-0Q-n8R" customClass="PosterViewController" customModule="SeSAC260102" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="93G-4k-6SK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Cd-do-ouq">
+                                <rect key="frame" x="76" y="237" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Us4-xD-m8Z">
+                                <rect key="frame" x="159" y="384" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cjP-P5-Xfa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fIS-fH-Ufo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1433" y="808"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
