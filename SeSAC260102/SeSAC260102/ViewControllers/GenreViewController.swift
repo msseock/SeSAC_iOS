@@ -16,6 +16,10 @@ class GenreViewController: UIViewController {
     
     @IBOutlet var centerLabel: UILabel!
     
+    @IBOutlet var mySwitch: UISwitch!
+    
+    @IBOutlet var myDatePicker: UIDatePicker!
+    @IBOutlet var myTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,13 +64,21 @@ class GenreViewController: UIViewController {
         
         buttonTapped(twoButton)
         
+        mySwitch.onTintColor = .red
+//        mySwitch.thumbTintColor = .yellow // 이건 여기서 안됨
+        
+        myTextField.attributedPlaceholder = NSAttributedString(
+            string: "placeholderr",
+            attributes: [ .foregroundColor : UIColor.systemBlue ]
+        )
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        mySwitch.thumbTintColor = .yellow // 여기서 해야됨
     }
-    
+
     private func setButtonDesign(
         for button: UIButton,
         title: String,
