@@ -43,131 +43,81 @@ class EmotionViewController: UIViewController {
         super.viewDidLoad()
 
         // button image
-        firstButton.setImage(emotion(rawValue: 0)?.image, for: .normal)
-
-        secondButton.setImage(emotion(rawValue: 1)?.image, for: .normal)
-        thirdButton.setImage(emotion(rawValue: 2)?.image, for: .normal)
-        fourthButton.setImage(emotion(rawValue: 3)?.image, for: .normal)
-        fifthButton.setImage(emotion(rawValue: 4)?.image, for: .normal)
-        sixthButton.setImage(emotion(rawValue: 5)?.image, for: .normal)
-        seventhButton.setImage(emotion(rawValue: 6)?.image, for: .normal)
-        eightButton.setImage(emotion(rawValue: 7)?.image, for: .normal)
-        nineButton.setImage(emotion(rawValue: 8)?.image, for: .normal)
-
+        firstButton.setImage(getEmotion(of: firstButton).image, for: .normal)
+        secondButton.setImage(getEmotion(of: secondButton).image, for: .normal)
+        thirdButton.setImage(getEmotion(of: thirdButton).image, for: .normal)
+        fourthButton.setImage(getEmotion(of: fourthButton).image, for: .normal)
+        fifthButton.setImage(getEmotion(of: fifthButton).image, for: .normal)
+        sixthButton.setImage(getEmotion(of: sixthButton).image, for: .normal)
+        seventhButton.setImage(getEmotion(of: seventhButton).image, for: .normal)
+        eightButton.setImage(getEmotion(of: eightButton).image, for: .normal)
+        nineButton.setImage(getEmotion(of: nineButton).image, for: .normal)
+        
         // label
-        firstLabel.text = generateEmotionLabel(for: 0)
-        secondLabel.text = generateEmotionLabel(for: 1)
-        thirdLabel.text = generateEmotionLabel(for: 2)
-        fourthLabel.text = generateEmotionLabel(for: 3)
-        fifthLabel.text = generateEmotionLabel(for: 4)
-        sixthLabel.text = generateEmotionLabel(for: 5)
-        seventhLabel.text = generateEmotionLabel(for: 6)
-        eightLabel.text = generateEmotionLabel(for: 7)
-        nineLabel.text = generateEmotionLabel(for: 8)
+        firstLabel.text = generateEmotionLabel(for: getEmotion(of: firstLabel))
+        secondLabel.text = generateEmotionLabel(for: getEmotion(of: secondLabel))
+        thirdLabel.text = generateEmotionLabel(for: getEmotion(of: thirdLabel))
+        fourthLabel.text = generateEmotionLabel(for: getEmotion(of: fourthLabel))
+        fifthLabel.text = generateEmotionLabel(for: getEmotion(of: fifthLabel))
+        sixthLabel.text = generateEmotionLabel(for: getEmotion(of: sixthLabel))
+        seventhLabel.text = generateEmotionLabel(for: getEmotion(of: seventhLabel))
+        eightLabel.text = generateEmotionLabel(for: getEmotion(of: eightLabel))
+        nineLabel.text = generateEmotionLabel(for: getEmotion(of: nineLabel))
     }
 
-    private func generateEmotionLabel(for index: Int) -> String {
-        return emotion(rawValue: index)!.text + " " + String(describing: emotionCountList[index])
+    private func generateEmotionLabel(for emotion: Emotion) -> String {
+        return emotion.text + " " + String(describing: emotionCountList[emotion.rawValue])
     }
     
+    @IBAction func emotionButtonTapped(_ sender: UIButton) {
+        let emotion = getEmotion(of: sender)
+        
+        emotionCountList[emotion.rawValue] += 1
+        getLabel(of: emotion).text = generateEmotionLabel(for: emotion)
+    }
     
-    
-    @IBAction func firstPushed(_ sender: UIButton) {
-        emotionCountList[0] += 1
-        firstLabel.text = generateEmotionLabel(for: 0)
-    }
-    @IBAction func secondPushed(_ sender: UIButton) {
-        emotionCountList[1] += 1
-        secondLabel.text = generateEmotionLabel(for: 1)
-    }
-    @IBAction func thirdPushed(_ sender: UIButton) {
-        emotionCountList[2] += 1
-        thirdLabel.text = generateEmotionLabel(for: 2)
-    }
-    @IBAction func fourthPushed(_ sender: UIButton) {
-        emotionCountList[3] += 1
-        fourthLabel.text = generateEmotionLabel(for: 3)
-    }
-    @IBAction func fifthPushed(_ sender: UIButton) {
-        emotionCountList[4] += 1
-        fifthLabel.text = generateEmotionLabel(for: 4)
-    }
-    @IBAction func sixthPushed(_ sender: UIButton) {
-        emotionCountList[5] += 1
-        sixthLabel.text = generateEmotionLabel(for: 5)
-    }
-    @IBAction func seventhPushed(_ sender: UIButton) {
-        emotionCountList[6] += 1
-        seventhLabel.text = generateEmotionLabel(for: 6)
-    }
-
-
-    @IBAction func eightPushed(_ sender: UIButton) {
-        emotionCountList[7] += 1
-        eightLabel.text = generateEmotionLabel(for: 7)
-    }
-
-    @IBAction func ninePushed(_ sender: UIButton) {
-        emotionCountList[8] += 1
-        nineLabel.text = generateEmotionLabel(for: 8)
-    }
-}
-
-enum emotion: Int {
-    case cold
-    case drooling
-    case exploding
-    case kissing
-    case melting
-    case partying
-    case sleepy
-    case sunglasses
-    case tears
-    
-    var image: UIImage {
-        switch self {
-        case .cold:
-            UIImage.cold
-        case .drooling:
-            UIImage.drooling
-        case .exploding:
-            UIImage.exploding
-        case .kissing:
-            UIImage.kissing
-        case .melting:
-            UIImage.melting
-        case .partying:
-            UIImage.partying
-        case .sleepy:
-            UIImage.sleepy
-        case .sunglasses:
-            UIImage.sunglasses
-        case .tears:
-            UIImage.tears
+    private func getEmotion(of button: UIButton) -> Emotion {
+        switch button {
+        case firstButton: .cold
+        case secondButton: .drooling
+        case thirdButton: .exploding
+        case fourthButton: .kissing
+        case fifthButton: .melting
+        case sixthButton: .partying
+        case seventhButton: .sleepy
+        case eightButton: .sunglasses
+        case nineButton: .tears
+        default: .none
         }
     }
     
-    var text: String {
-        switch self {
-        case .cold:
-            "추워"
-        case .drooling:
-            "맛있어"
-        case .exploding:
-            "머리터져"
-        case .kissing:
-            "히히"
-        case .melting:
-            "죽겠다"
-        case .partying:
-            "신나"
-        case .sleepy:
-            "졸려"
-        case .sunglasses:
-            "멋져"
-        case .tears:
-            "삥삥"
+    private func getEmotion(of label: UILabel) -> Emotion {
+        switch label {
+        case firstLabel: .cold
+        case secondLabel: .drooling
+        case thirdLabel: .exploding
+        case fourthLabel: .kissing
+        case fifthLabel: .melting
+        case sixthLabel: .partying
+        case seventhLabel: .sleepy
+        case eightLabel: .sunglasses
+        case nineLabel: .tears
+        default: .none
         }
     }
-
+    
+    private func getLabel(of emotion: Emotion) -> UILabel {
+        switch emotion {
+        case .cold: self.firstLabel
+        case .drooling: self.secondLabel
+        case .exploding: self.thirdLabel
+        case .kissing: self.fourthLabel
+        case .melting: self.fifthLabel
+        case .partying: self.sixthLabel
+        case .sleepy: self.seventhLabel
+        case .sunglasses: self.eightLabel
+        case .tears: self.nineLabel
+        case .none: UILabel()
+        }
+    }
 }

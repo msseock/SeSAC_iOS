@@ -34,7 +34,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="fourthPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZBY-eb-W9U"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F4n-XJ-Gep"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -68,7 +68,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="fifthPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Auq-gL-oJn"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="To8-hu-U0l"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -100,7 +100,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="sixthPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C0M-rK-CHb"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DIB-hW-m1g"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -134,7 +134,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="cold" title="Button"/>
                                         <connections>
-                                            <action selector="firstPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahf-Sw-Jyx"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yjq-l2-U0s"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -167,7 +167,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="secondPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cIT-kD-JSg"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JpE-Df-KS4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -202,7 +202,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="thirdPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PbJ-q5-d2A"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IXr-91-WWB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -236,7 +236,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="seventhPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5xd-6l-pzW"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8D6-xm-I71"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -270,7 +270,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="eightPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4DW-4g-yRa"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G1m-Up-OT8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -304,7 +304,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="ninePushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EQE-Mj-yBZ"/>
+                                            <action selector="emotionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FLi-S6-XVU"/>
                                         </connections>
                                     </button>
                                 </subviews>

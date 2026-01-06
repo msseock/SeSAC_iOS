@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DfF-MI-fhd">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="gSj-4q-lTW">
+            <objects>
+                <viewController id="DfF-MI-fhd" customClass="SignUpViewController" customModule="NetflixClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vjT-cn-4eW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JACKFLIX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oY8-nH-Jgf">
+                                <rect key="frame" x="133.66666666666666" y="134" width="125.99999999999997" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibL-HZ-Py8">
+                                <rect key="frame" x="36" y="458" width="321" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1cw-fI-uUx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="회원가입">
+                                    <backgroundConfiguration key="background" cornerRadius="4">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" red="0.02745056525" green="0.02745056525" blue="0.031372074040000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="DfF-MI-fhd" eventType="touchUpInside" id="1Hf-1L-5WR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A1G-px-lSV">
+                                <rect key="frame" x="36" y="250" width="321" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nicknameTextFieldDidEndOnExit:" destination="DfF-MI-fhd" eventType="editingDidEndOnExit" id="C6B-DL-Hjq"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="74K-i8-e7I">
+                                <rect key="frame" x="36" y="300" width="321" height="34"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nicknameTextFieldDidEndOnExit:" destination="DfF-MI-fhd" eventType="editingDidEndOnExit" id="P8d-UP-BzT"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8F8-pp-weF">
+                                <rect key="frame" x="36" y="350" width="321" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nicknameTextFieldDidEndOnExit:" destination="DfF-MI-fhd" eventType="editingDidEndOnExit" id="IZ0-HR-63g"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mmh-dE-Bs0">
+                                <rect key="frame" x="36" y="400" width="321" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nicknameTextFieldDidEndOnExit:" destination="DfF-MI-fhd" eventType="editingDidEndOnExit" id="CDf-5O-Glj"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uxx-eq-ZVU">
+                                <rect key="frame" x="36" y="200" width="321" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nicknameTextFieldDidEndOnExit:" destination="DfF-MI-fhd" eventType="editingDidEndOnExit" id="WeU-b5-Pc8"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추가 정보 입력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpl-ED-oUh">
+                                <rect key="frame" x="36" y="522" width="97" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKQ-dB-5eY">
+                                <rect key="frame" x="296" y="518.33333333333337" width="63" height="28"/>
+                                <color key="onTintColor" red="0.8076171875" green="0.3098144531" blue="0.2509765625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vkN-nH-LlE"/>
+                        <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JKQ-dB-5eY" firstAttribute="centerY" secondItem="Wpl-ED-oUh" secondAttribute="centerY" id="1F8-ww-SAl"/>
+                            <constraint firstItem="8F8-pp-weF" firstAttribute="leading" secondItem="vkN-nH-LlE" secondAttribute="leading" constant="36" id="1uW-vf-5c1"/>
+                            <constraint firstItem="oY8-nH-Jgf" firstAttribute="top" secondItem="vkN-nH-LlE" secondAttribute="top" constant="16" id="3RT-c1-uk3"/>
+                            <constraint firstItem="vkN-nH-LlE" firstAttribute="trailing" secondItem="JKQ-dB-5eY" secondAttribute="trailing" constant="36" id="4pi-gb-nOe"/>
+                            <constraint firstItem="A1G-px-lSV" firstAttribute="leading" secondItem="vkN-nH-LlE" secondAttribute="leading" constant="36" id="6eS-jO-zfS"/>
+                            <constraint firstItem="Uxx-eq-ZVU" firstAttribute="top" secondItem="oY8-nH-Jgf" secondAttribute="bottom" constant="36" id="6jO-eu-4Be"/>
+                            <constraint firstItem="vkN-nH-LlE" firstAttribute="trailing" secondItem="ibL-HZ-Py8" secondAttribute="trailing" constant="36" id="CFy-DG-TYV"/>
+                            <constraint firstItem="oY8-nH-Jgf" firstAttribute="centerX" secondItem="vjT-cn-4eW" secondAttribute="centerX" id="EMM-1f-0qK"/>
+                            <constraint firstItem="Mmh-dE-Bs0" firstAttribute="top" secondItem="8F8-pp-weF" secondAttribute="bottom" constant="16" id="FiV-A6-sSh"/>
+                            <constraint firstItem="Mmh-dE-Bs0" firstAttribute="leading" secondItem="vkN-nH-LlE" secondAttribute="leading" constant="36" id="Gv5-2F-5ha"/>
+                            <constraint firstItem="vkN-nH-LlE" firstAttribute="trailing" secondItem="Mmh-dE-Bs0" secondAttribute="trailing" constant="36" id="ICV-oh-pmy"/>
+                            <constraint firstItem="74K-i8-e7I" firstAttribute="leading" secondItem="vkN-nH-LlE" secondAttribute="leading" constant="36" id="KAO-iO-aQb"/>
+                            <constraint firstItem="74K-i8-e7I" firstAttribute="top" secondItem="A1G-px-lSV" secondAttribute="bottom" constant="16" id="VDs-ra-4PR"/>
+                            <constraint firstItem="vkN-nH-LlE" firstAttribute="trailing" secondItem="74K-i8-e7I" secondAttribute="trailing" constant="36" id="Zi3-W5-3OE"/>
+                            <constraint firstItem="vkN-nH-LlE" firstAttribute="trailing" secondItem="Uxx-eq-ZVU" secondAttribute="trailing" constant="36" id="c1C-4r-Doz"/>
+                            <constraint firstItem="Uxx-eq-ZVU" firstAttribute="leading" secondItem="vkN-nH-LlE" secondAttribute="leading" constant="36" id="cma-HM-Dlo"/>
+                            <constraint firstItem="A1G-px-lSV" firstAttribute="top" secondItem="Uxx-eq-ZVU" secondAttribute="bottom" constant="16" id="dYZ-bb-RhB"/>
+                            <constraint firstItem="vkN-nH-LlE" firstAttribute="trailing" secondItem="A1G-px-lSV" secondAttribute="trailing" constant="36" id="dnQ-Do-eTc"/>
+                            <constraint firstItem="Wpl-ED-oUh" firstAttribute="leading" secondItem="vkN-nH-LlE" secondAttribute="leading" constant="36" id="eV1-j4-ICd"/>
+                            <constraint firstItem="vkN-nH-LlE" firstAttribute="trailing" secondItem="8F8-pp-weF" secondAttribute="trailing" constant="36" id="k7r-r2-iz4"/>
+                            <constraint firstItem="Wpl-ED-oUh" firstAttribute="top" secondItem="ibL-HZ-Py8" secondAttribute="bottom" constant="20" id="kzN-Jh-Hdv"/>
+                            <constraint firstItem="ibL-HZ-Py8" firstAttribute="top" secondItem="Mmh-dE-Bs0" secondAttribute="bottom" constant="24" id="mz4-0D-8zi"/>
+                            <constraint firstItem="ibL-HZ-Py8" firstAttribute="leading" secondItem="vkN-nH-LlE" secondAttribute="leading" constant="36" id="qYM-cC-a1K"/>
+                            <constraint firstItem="8F8-pp-weF" firstAttribute="top" secondItem="74K-i8-e7I" secondAttribute="bottom" constant="16" id="unn-bE-lLm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Ab-HY-Sv1"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Uxx-eq-ZVU" id="a2u-1H-jeo"/>
+                        <outlet property="locationTextField" destination="8F8-pp-weF" id="KtQ-Qh-VoY"/>
+                        <outlet property="logoLabel" destination="oY8-nH-Jgf" id="iZI-S0-Ba1"/>
+                        <outlet property="moreInfoSwitch" destination="JKQ-dB-5eY" id="iVE-HH-hFZ"/>
+                        <outlet property="nicknameTextField" destination="74K-i8-e7I" id="66k-QG-pvg"/>
+                        <outlet property="passwordTextField" destination="A1G-px-lSV" id="MVl-6o-xzV"/>
+                        <outlet property="recommenderTextField" destination="Mmh-dE-Bs0" id="JBB-We-QvI"/>
+                        <outlet property="signUpButton" destination="ibL-HZ-Py8" id="wPK-G2-n8U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCL-N6-fLE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4271" y="1412"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
