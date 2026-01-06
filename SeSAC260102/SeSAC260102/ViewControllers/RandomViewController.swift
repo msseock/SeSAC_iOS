@@ -27,6 +27,9 @@ class RandomViewController: UIViewController {
         numberLabel.layer.borderColor = UIColor.black.cgColor
         numberLabel.layer.borderWidth = 3
         
+        numberLabel.layer.cornerRadius = 30
+        numberLabel.clipsToBounds = true
+        
         randomButton.backgroundColor = UIColor(red: 1, green: 1, blue: 129/255, alpha: 1)
 //        randomButton.layer.borderColor = UIColor.systemYellow.cgColor
 //        randomButton.layer.borderWidth = 3
