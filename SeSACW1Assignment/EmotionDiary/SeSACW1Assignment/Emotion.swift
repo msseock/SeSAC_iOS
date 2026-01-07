@@ -20,28 +20,28 @@ enum Emotion: Int {
 }
 
 extension Emotion {
-    var image: UIImage {
+    var imageName: String {
         switch self {
         case .cold:
-            UIImage.cold
+            "cold"
         case .drooling:
-            UIImage.drooling
+            "drooling"
         case .exploding:
-            UIImage.exploding
+            "exploding"
         case .kissing:
-            UIImage.kissing
+            "kissing"
         case .melting:
-            UIImage.melting
+            "melting"
         case .partying:
-            UIImage.partying
+            "partying"
         case .sleepy:
-            UIImage.sleepy
+            "sleepy"
         case .sunglasses:
-            UIImage.sunglasses
+            "sunglasses"
         case .tears:
-            UIImage.tears
+            "tears"
         case .none:
-            UIImage(systemName: "nosign")!
+            "nosign"
         }
     }
     
