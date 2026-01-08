@@ -16,16 +16,29 @@ class MovieViewController: UIViewController {
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var recommendButton: UIButton!
     
-    var list = [
-        "세계의 주인", "프란시스 하", "존 오브 인터레스트", "애프터 양", "사울의 아들"
+    typealias MovieSet = (movieName: String, runtime: Int, actor: String)
+    
+    var list: [MovieSet] = [
+        ("세계의 주인", 123, "서수빈"),
+        ("프란시스 하", 100, "그레타 거윅"),
+        ("존 오브 인터레스트", 150, "산드라 휠러"),
+        ("애프터 양", 90, "저스틴 민"),
+        ("사울의 아들", 106, "게자 뢰리히"),
     ]
     
+    var movieList: [MovieData] = [
+        .init(title: "세계의 주인", runtime: 123, actor: "서수빈"),
+        .init(title: "프란시스 하", runtime: 100, actor: "그레타 거윅"),
+        .init(title: "존 오브 인터레스트", runtime: 150, actor: "산드라 휠러"),
+        .init(title: "애프터 양", runtime: 90, actor: "저스틴 민"),
+        .init(title: "사울의 아들", runtime: 106, actor: "게자 뢰리히")
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
                         
         setDateLabel()
-        setTitleLabel()
+        setMovieInfoLabels()
         setButtonDesign()
 
     }
@@ -33,9 +46,9 @@ class MovieViewController: UIViewController {
     /// 영화 추가
     @IBAction func textFieldReturnTapped(_ sender: UITextField) {
         if let text = userTextField.text, !text.trimmingCharacters(in: [" "]).isEmpty {
-            list.append(text)
+            movieList.append(.init(title: text, runtime: 0, actor: "actor"))
             userTextField.text?.removeAll()
-            print(list)
+            print(movieList)
         } else {
             print("뭐가 없음")
         }
@@ -43,7 +56,7 @@ class MovieViewController: UIViewController {
     
     /// 영화 랜덤 추천
     @IBAction func recommendButtonTapped(_ sender: UIButton) {
-        titleLabel.text =  getRandomMovie()
+        setMovieInfoLabels()
     }
     
 }
@@ -56,8 +69,12 @@ extension MovieViewController {
         dateLabel.numberOfLines = 1
     }
     
-    func setTitleLabel() {
-        titleLabel.text = getRandomMovie()
+    func setMovieInfoLabels() {
+        let randomMovieSet = getRandomMovie()
+        
+        titleLabel.text =  randomMovieSet.title
+        actorLabel.text = randomMovieSet.actor
+        runtimeLabel.text = String(randomMovieSet.runtime)
     }
     
     func setButtonDesign() {
@@ -79,9 +96,17 @@ extension MovieViewController {
         return result
     }
     
-    func getRandomMovie() -> String {
-        let random = list.randomElement()
-        return random ?? "괴물"
+    func getRandomMovie() -> MovieData {
+        let randomElement = movieList.randomElement()!
+        
+        return randomElement
     }
 
+}
+
+
+struct MovieData {
+    let title: String
+    let runtime: Int
+    let actor: String
 }
