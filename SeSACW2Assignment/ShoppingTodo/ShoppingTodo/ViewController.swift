@@ -1,0 +1,19 @@
+//
+//  ViewController.swift
+//  ShoppingTodo
+//
+//  Created by 석민솔 on 1/9/26.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+}
+
